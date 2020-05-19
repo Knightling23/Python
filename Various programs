@@ -1,0 +1,160 @@
+import random as r
+import statistics 
+#random number game
+
+
+num=(r.randint(1,100));
+choice =int(input(" guess a number between one and a hundred "));
+chances=1;
+
+while (num != choice):
+    
+    if(chances == 3):
+       print(" Sorry all out of tries play again next time");
+       break;
+    elif(choice >num):
+        print(" guess is to high ");
+    elif (choice < num):
+        print(" guess is to low ");
+   
+
+
+    choice=int(input(" guess a number between one and a hundred "));
+    chances +=1;
+
+if (choice == num):
+        print(" Wonderful you got it, it only took you ", chances , "guesses");
+       
+
+print(" ");
+#----------------------------------------------
+
+print(" ");
+#password game
+password="abc123";
+chances=1;
+choice=choice =str(input(" Please type in your password "));
+
+
+while (password != choice):
+    
+    if(chances == 3):
+       print(" Password lockout activated");
+       break;
+    elif(choice != password):
+        print(" try again ");
+   
+
+
+    choice=str(input(" Please type in your password "));
+    chances +=1;
+
+if (choice == password):
+        print("Thank you this is the correct password ");
+
+
+print(" ");
+#-----------------------------------------
+
+#ask for age
+
+print(" ");
+age =int(input("what is your age"));
+chances=0;
+while (age <1 or age >120):
+    
+    if(chances == 3):
+       print("error age impossible , default has been used");
+       age=25;
+       break;
+    elif(age <1 or age >120):
+        print(" try again ");
+   
+
+
+    age=int(input("what is your age again?"));
+    chances +=1;
+
+if (age>1 and age<120):
+        print("you are: ",age, " years old" );
+
+print(" ");
+
+#-------------------------------------
+
+# number 4
+
+print(" ");
+list=["adam","fox","mike","kyle","suzan"];
+
+print ("Length of the list  = ", len(list));
+
+
+#---------------------------------------
+
+#number 5
+
+print(" ");
+list=["adam","mike","fox","suzan" ,"kyle"];
+
+list.sort();
+
+print(list);
+
+#--------------------------------------------
+
+#number 6
+print(" ");
+list=[1,3,8,2 ,6];
+
+list.sort();
+print(list);
+
+#----------------------------------------------
+
+#number 7
+print(" ");
+for k in range(0, 100): 
+      
+    # checking condition 
+    if k % 2 != 0: 
+        print(k, end = " ");
+
+#-----------------------------------------------
+#numner 8
+print(" ");
+item =int(input("what is the cost of your item"));
+tax=.0875;
+totaltax=item*tax;
+Totalcomplete=totaltax+item;
+
+print("the final price with tx is: ",Totalcomplete);   
+#-------------------------------------------------
+
+#number 9
+print(" ");
+
+amount =int(input("how many items are you buying"));
+cost=amount*4;
+print(" ");
+
+if(amount > 1 and amount <10):
+    discount=.05;
+    totaldis=cost*discount;
+    totalamount =cost - totaldis;
+
+    print("the discount amount is: ",totaldis,"$");
+    print("the total cost is: ",totalamount,"$");
+
+print(" ");
+
+if(amount > 10):
+    discount=.1;
+    totaldis=cost*discount;
+    totalamount =cost - totaldis;
+
+    print("the discount amount is: ",totaldis,"$");
+    print("the total cost is: ",totalamount,"$");
+
+    
+    
